@@ -13,7 +13,7 @@ var database = firebase.database();
 function subscribe() {
     firebase.database().ref('email/' + $('#inputEmail').val()).set(firebase.database.ServerValue.TIMESTAMP)
       .then(function() {
-        console.log("Thanks!");
+         $('#message').append("Thanks!");
       })
       .catch(function(e) {
         console.log(e);
