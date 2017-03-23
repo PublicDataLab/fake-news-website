@@ -1,7 +1,76 @@
-h2, h4, p, .downloader, .form-inline {
+.container {
+  
+}
+
+.title {
+  color: #212121;
+  font-size: 50px;
   text-align: center;
 }
 
-a {
-  text-decoration: underline;
+.intro-text {
+  color: #212121;
+  font-size: 14px;
+  text-align: center;
+}
+
+.download-button {
+  padding: 30px;
+  text-align: center;
+}
+
+.body-text {
+  margin-top: 15px;
+  color: #212121;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Modal */
+.modal-title {
+  color: #212121;
+  text-align: center;
+}
+
+.model-text {
+  color: #212121;
+  text-align: center;
+}
+
+.form-group {
+  color: #212121;
+}
+
+.control-label {
+  color: #0288D1;
+}
+
+.form-control {
+  color: #0288D1;
+}
+
+.form-group {
+  color: #0288D1;
+}
+
+.download-link {
+  text-align: center;
+}
+
+.download-link a {
+  color: #0288D1;
+}
+
+.download-link a:hover {
+  color: #1A237E;
+}
+
+.submit-message {
+  color: #212121;
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal-footer {
+  color: #1A237E;
 }

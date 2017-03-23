@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>A Field Guide to Fake News</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
@@ -16,21 +18,22 @@
 </head>
 
 <body>
-
     <div class="container">
 
         <div class="row">
             <div class=".col-sm-4s">
-                <h2>A field guide to Fake News</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2 class="title">A Field Guide to Fake News</h2>
 
-                <div class="downloader">
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-book fa-5x" aria-hidden="true"></i></button>
+                <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="download-button">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#form-modal"><i class="fa fa-book fa-5x" aria-hidden="true"></i></button>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-                <div class="modal fade" id="myModal" role="dialog">
+                <!-- Modal -->
+                <div class="modal fade" id="form-modal" role="dialog">
                     <div class="modal-dialog">
 
                         <div class="modal-content">
@@ -39,22 +42,24 @@
                                 <h4 class="modal-title">Download PDF</h4>
                             </div>
                             <div class="modal-body">
-                                <p>Stay in touch!</p>
+                                <p class="model-text">Stay in touch!</p>
 
-                                <form id="contact_form" data-toggle="validator" role="form">
+                                <form id="contact_form" data-toggle="validator" role="form" onsubmit="return false">
                                     <div class="form-group">
-                                        <label for="inputEmail" class="control-label">Email</label>
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Enter a valid email address" required>
-                                        <div class="help-block with-errors"></div>
+                                      <label for="inputEmail" class="control-label">Email</label>
+                                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Enter a valid email address!" required>
+                                      <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="button" class="btn btn-primary" onClick="subscribe()" value="Submit"/>
+                                      <button type="submit" onclick="subscribe()" class="btn btn-primary">Submit</button>
                                     </div>
                                 </form>
 
-                                <p id="message"><p>
+                                <p class="submit-message" id="message"><p>
 
-                                <p><a href="download/sample.pdf">Download</a></p>
+                                <div class="download-link">
+                                  <a href="download/sample.pdf" target="_blank">Download</a>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -68,7 +73,6 @@
         </div>
 
     </div>
-
 </body>
 
 </html>
