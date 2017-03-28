@@ -1,30 +1,21 @@
-.container {
-  
-}
-
-.title {
+/*.title {
   color: #212121;
   font-size: 50px;
   text-align: center;
-}
+}*/
 
-.intro-text {
+/*.intro-text {
   color: #212121;
   font-size: 14px;
   text-align: center;
-}
+}*/
 
-.download-button {
-  padding: 30px;
-  text-align: center;
-}
-
-.body-text {
+/*.body-text {
   margin-top: 15px;
   color: #212121;
   font-size: 14px;
   text-align: center;
-}
+}*/
 
 /* Modal */
 .modal-title {
@@ -78,6 +69,29 @@
 
 /*STYLE*/
 
+body {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+}
+
+.important {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+.row-padding {
+  padding-top: 70px;
+
+}
+
 .main {
     background-image: url(../images/background.png);
     background-size: cover;
@@ -88,14 +102,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.white {
-  color: white;
 }
 
 #logo {
