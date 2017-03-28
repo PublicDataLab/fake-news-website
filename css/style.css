@@ -74,3 +74,50 @@
 .modal-footer {
   color: #1A237E;
 }
+
+
+/*STYLE*/
+
+.main {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+#logo {
+  width: 35vw;
+}
+
+/* The animation code */
+@keyframes star-rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(22.5deg);}
+}
+
+#logo #star {
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation-name: star-rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.down {
+  position: absolute;
+  bottom: 50px;
+}
