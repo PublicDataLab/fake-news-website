@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="loading">
     <div class="main cover">
         
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.81 342.81">
@@ -31,7 +31,7 @@
           }
         </style>
       </defs>
-      <title>Website</title>
+      <!-- <title>Website</title> -->
       <polygon id="star" class="cls-1" points="171.4 69.46 205.5 0 210.42 77.22 268.5 26.09 243.49 99.32 316.71 74.31 265.59 132.39 342.81 137.31 273.35 171.4 342.81 205.5 265.59 210.42 316.71 268.5 243.49 243.49 268.5 316.71 210.42 265.59 205.5 342.81 171.4 273.35 137.31 342.81 132.39 265.59 74.31 316.71 99.32 243.49 26.09 268.5 77.22 210.42 0 205.5 69.46 171.4 0 137.31 77.22 132.39 26.09 74.31 99.32 99.32 74.31 26.09 132.39 77.22 137.31 0 171.4 69.46"/>
       <g id="texts">
         <g>
@@ -124,7 +124,11 @@
     </svg>
 
 
-        <h1 class="down white"><i class="fa fa-hand-o-down" aria-hidden="true"></i></h1>
+        <h1 class="down white">
+          <i class="loader-item fa fa-spinner fa-pulse fa-1x fa-fw"></i>
+          <span class="loader-item sr-only">Loading...</span>
+          <i class="loaded-item hidden fa fa-chevron-circle-down fa-2x" aria-hidden="true"></i>
+        </h1>
     </div>
     <div class="container fluid">
         <div class="container">
@@ -136,14 +140,14 @@
                     </p>
                 </div>
             </div>
-            <div class="row row-padding">
-                <div class="col-md-8">
+            <div class="row row-padding hidden">
+                <div class="col-md-8 col-md-offset-2">
                     <h2>Downlad the preview</h2>
                     <p>
                         "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
                     </p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-md-offset-2">
                     <div class="download-button">
                         <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#form-modal"><i class="fa fa-book fa-1x" aria-hidden="true"></i>Download</button>
                     </div>
@@ -195,73 +199,13 @@
             <div class="row row-padding">
                 <div class="col-md-8">
                     <h2>Credits</h2>
-                        <h3>Co-Investigator</h3>
-                        <ul>
-                            <li><strong>Liliana Bounegru</strong>, University of Ghent</li>
-                            <li><strong>Jonathan Gray</strong>, University of Bath</li>
-                            <li><strong>Tommaso Venturini</strong>, Univ Lyon, Inria, ENS de Lyon, CNRS, UCB Lyon 1</li>
-                            <li><strong>Michele Mauri</strong>, Density Design</li>
-                        </ul>
-                    
-                        <h3>Designers</h3>
-                        <ul>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                        </ul>
-                    
-                        <h3>Facilitators</h3>
-                        <ul>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                        </ul>
-                    
-                        <h3>Analysts</h3>
-                        <ul>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                            <li>asd</li>
-                        </ul>
-                    
-                        <h3>Editorial assistant</h3>
-                        <ul>
-                            <li><strong>Daniela Demarchi</strong>, University of Amsterdam</li>
-                        </ul>
-                    <h3>Advisors</h3>
-                    <p>We would also like to register our gratitude to the following people who provided invaluable advice to the development of the guide at various stages.</p>
-                    <ul>
-                        <li>[TBC]</li>
-                        <li>[TBC]</li>
-                        <li>[TBC]</li>
-                        <li>[TBC]</li>
-                    </ul>
+                    <div id="credits"></div>
                 </div>
             </div>
             <div class="row row-padding">
                 <div class="col-md-8">
                     <h2>Featured on:</h2>
-                    <ul>
-                        <li>
-                            <h3><a href="http://www.journalismfestival.com/programme/2017/a-field-guide-to-fake-news">International Journalism Festival</a></h3>
-                            <p>16:00 - 17:00   friday 7/04/2017</p>
-                            <p>Perugia</p>
-                        </li>
-                        <li>
-                            <h3><a href="http://www.journalismfestival.com/programme/2017/a-field-guide-to-fake-news">International Journalism Festival</a></h3>
-                            <p>16:00 - 17:00   friday 7/04/2017</p>
-                            <p>Perugia</p>
-                        </li>
-                        <li>
-                            <h3><a href="http://www.journalismfestival.com/programme/2017/a-field-guide-to-fake-news">International Journalism Festival</a></h3>
-                            <p>16:00 - 17:00   friday 7/04/2017</p>
-                            <p>Perugia</p>
-                        </li>
-                    </ul>
-                    
+                    <div id="featured-on"></div>
                 </div>
             </div>
         </div> 
@@ -269,6 +213,69 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/075b57b064.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.js"></script>
+    <script>
+      function init() {
+        Tabletop.init({ 
+          key: 'https://docs.google.com/spreadsheets/d/1ffGN4kcR1NRxtr7h-XSq9UFydh335sa0LWnRQ4VEhro/pubhtml',
+          callback: function(data, tabletop) { 
+            listCredits(data['Credits']['elements']);
+            listFeaturedOn(data['Featured']['elements']);
+            d3.selectAll('.loader-item').classed('hidden', true);
+            d3.selectAll('.loaded-item').classed('hidden', false);
+            d3.select('body').classed('loading', false);
+          },
+          simpleSheet: false 
+        })
+      }
+      function listCredits(data) {
+        var nested_data = d3.nest()
+            .key(function(d) { return d['display on the website']; })
+            .key(function(d) { return d.role; })
+            .entries(data);
+
+        var people = nested_data.filter(function(d){
+          return d.key == 'TRUE'
+        })
+
+        people = people[0].values;
+        var credits = d3.select('#credits');
+
+        people.forEach(function(role){
+          credits.append('h3').html(role.key);
+          var list = credits.append('ul')
+          role.values.forEach(function(person){
+            var line = list.append('li');
+            var name = person.url ? '<a href="'+person.url+'"><strong>'+person.name+'</strong></a>' : '<strong>'+person.name+'</strong>';
+            var text = name + ', ' + person.affiliation;
+            line.html(text);
+          })
+        });
+      }
+      function listFeaturedOn(data) {
+        var nested_data = d3.nest()
+            .key(function(d) { return d['display on the website']; })
+            .entries(data);
+
+        var events = nested_data.filter(function(d){
+          return d.key == 'TRUE'
+        })
+        
+        events = events[0].values;
+        var featuredOn = d3.select('#featured-on');
+        var list = featuredOn.append('ul')
+
+        events.forEach(function(event){
+          var line = list.append('li');
+          var title = event.url ? '<a href="'+event.url+'">'+event.title+'</a>' : '<strong>'+event.title+'</strong>'
+          line.append('h3').html(title);
+          line.append('p').html(event.date);
+          line.append('p').html(event.location);
+        });
+      }
+      window.addEventListener('DOMContentLoaded', init)
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
     <script src="js/subscribe.js"></script>
