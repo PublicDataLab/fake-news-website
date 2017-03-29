@@ -18,7 +18,7 @@
 }*/
 
 /* Modal */
-.modal-title {
+/*.modal-title {
   color: #212121;
   text-align: center;
 }
@@ -64,14 +64,17 @@
 
 .modal-footer {
   color: #1A237E;
-}
+}*/
 
 
 /*STYLE*/
 
 body {
   font-family: 'Crimson Text', serif;
-  font-size: 18px;
+  font-size: 21px;
+  color: #2e2d2e;
+  padding-bottom: 15vh;
+  border-bottom: 20px solid #E95265;
 }
 
 body.loading {
@@ -79,9 +82,21 @@ body.loading {
   overflow: hidden;
 }
 
-.important {
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: underline;
+  /*border-bottom: 2px solid #E95265;*/
+}
+
+a:hover {
+  
+  color: #E95265;
+}
+
+h4 {
   font-weight: bold;
-  font-style: italic;
+  font-size: 18px;
 }
 
 .center-text {
@@ -93,7 +108,7 @@ body.loading {
 }
 
 .row-padding {
-  padding-top: 70px;
+  padding-top: 50px;
 
 }
 
@@ -131,4 +146,44 @@ body.loading {
 .down {
   position: absolute;
   bottom: 50px;
+}
+
+/*FORM*/
+
+.modal-body {
+  padding: 0;
+}
+
+input.form-control {
+  height: 100px;
+  padding: 0 0 7px 30px;
+  font-size: 36px;
+  border-width: 5px;
+  border-radius: 0;
+  border-color: #2e2d2e;
+  text-align: center;
+}
+
+.has-error .form-control {
+  border-color: #E95265;
+}
+
+.btn-block {
+  height: 100px;
+  border-radius: 0;
+  color: #2e2d2e;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-color: #46BBDF;
+  border-width: 5px;
+  transition: all 0.5s;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #46BBDF;
+    border-color: #46BBDF;
+}
+
+.btn-block h3 {
+  margin-top:10px;
 }
