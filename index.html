@@ -210,7 +210,9 @@
             <div class="row row-padding">
                 <div class="col-md-10 col-md-offset-1">
                     <h1>Involved institutions</h1>
-                    <p>[TBA]</p>
+                    <p>[PDL logo]</p>
+                    <p>[Firstdraft logo</p>
+                    <div id="institutions"></div>
                 </div>
             </div>
             <div class="row row-padding">
@@ -239,6 +241,7 @@
           callback: function(data, tabletop) {
             listCredits(data['Credits']['elements']);
             listFeaturedOn(data['Featured']['elements']);
+            listInstitutions(data['Institutions']['elements'])
             d3.selectAll('.loader-item').classed('hidden', true);
             // d3.selectAll('.loaded-item').classed('hidden', false);
             d3.select('body').classed('loading', false);
@@ -246,6 +249,36 @@
           simpleSheet: false
         })
       }
+
+      function listInstitutions(data) {
+        //create the list
+        var nested_data = d3.nest()
+            .key(function(d) { return d['display on the website']; })
+            .entries(data);
+        
+        // finter elements
+        var institutions = nested_data.filter(function(d){
+          return d.key == 'TRUE'
+        });
+        institutions = institutions[0].values;
+
+        //get the HTML element
+        var div = d3.select('#institutions');
+
+        //create the list
+        var list = featuredOn.append('ul');
+
+        //add items to the list
+        institutions.forEach(function(institution){
+            var line = list.append('li');
+            var name = person.url ? '<a href="'+person.url+'" target="_blank"><strong>'+person.name+'</strong></a>' : '<strong>'+person.name+'</strong>';
+            var text = person.affiliation ? name + ', ' + person.affiliation : name;
+            line.html(text);
+        })
+
+        console.log(institutions);
+      }
+
       function listCredits(data) {
         var nested_data = d3.nest()
             .key(function(d) { return d['display on the website']; })
@@ -297,18 +330,18 @@
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
     <script src="js/subscribe.js"></script>
 
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96511985-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
 </body>
-
-<!-- Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-96511985-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </html>
