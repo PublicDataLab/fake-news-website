@@ -94,6 +94,10 @@ a:hover {
   color: #E95265;
 }
 
+p.introduction {
+  font-size: 30px;
+}
+
 h4 {
   font-weight: bold;
   font-size: 18px;
@@ -117,7 +121,7 @@ h4 {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 40vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +135,7 @@ h4 {
 }
 
 #logo {
-  max-width: 35vw;
+  max-width: 45vw;
   max-height: 80%;
 }
 
@@ -173,6 +177,10 @@ input.form-control {
 
 .has-error .form-control {
   border-color: #E95265;
+}
+
+.has-error .control-label {
+  color: #E95265;
 }
 
 .btn-block {
