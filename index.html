@@ -241,7 +241,7 @@
           callback: function(data, tabletop) {
             listCredits(data['Credits']['elements']);
             listFeaturedOn(data['Featured']['elements']);
-            listInstitutions(data['Institutions']['elements'])
+            listInstitutions(data['Institutions']['elements']);
             d3.selectAll('.loader-item').classed('hidden', true);
             // d3.selectAll('.loaded-item').classed('hidden', false);
             d3.select('body').classed('loading', false);
@@ -262,17 +262,21 @@
         });
         institutions = institutions[0].values;
 
+        console.log(institutions)
+
         //get the HTML element
         var div = d3.select('#institutions');
 
         //create the list
-        var list = featuredOn.append('ul');
+        var list = div.append('ul');
 
         //add items to the list
         institutions.forEach(function(institution){
+            //add item
             var line = list.append('li');
-            var name = person.url ? '<a href="'+person.url+'" target="_blank"><strong>'+person.name+'</strong></a>' : '<strong>'+person.name+'</strong>';
-            var text = person.affiliation ? name + ', ' + person.affiliation : name;
+            //create html element
+            var name = institution.url ? '<a href="'+institution.url+'" target="_blank"><strong>'+institution.name+'</strong></a>' : '<strong>'+institution.name+'</strong>';
+            var text = institution.affiliation ? name + ', ' + institution.affiliation : name;
             line.html(text);
         })
 
