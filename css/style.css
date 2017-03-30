@@ -27,6 +27,10 @@ p.introduction {
   font-size: 30px;
 }
 
+ul {
+  padding-left: 23px;
+}
+
 h4 {
   font-weight: bold;
   font-size: 18px;
@@ -154,4 +158,25 @@ span.asterisk {
     height: auto !important;
     font-size: 24px !important;
     border-radius: 0px !important;
+}
+
+@media screen and (max-width: 720px) {
+  #mc_embed_signup .indicates-required {
+    display: none !important;
+  }
+  #mc_embed_signup .button{
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+  #mc_embed_signup .mc-field-group input {
+    min-width: 100% !important;
+    padding: 16px 12px 10px !important;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  p.introduction {
+    font-size: 24px;
+  }
 }
