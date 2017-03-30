@@ -72,6 +72,8 @@
 body {
   font-family: 'Crimson Text', serif;
   font-size: 18px;
+  border-bottom: 20px solid #E95265;
+  padding-bottom: 80px;
 }
 
 body.loading {
@@ -102,15 +104,22 @@ body.loading {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: height 0.5s;
+    transition-delay: 0.3s;
+}
+
+body.loading .main {
+  height: 100vh;
 }
 
 #logo {
-  width: 35vw;
+  max-width: 35vw;
+  max-height: 80%;
 }
 
 /* The animation code */

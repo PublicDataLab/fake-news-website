@@ -5,6 +5,7 @@
     <title>A Field Guide to Fake News</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#E95265" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
@@ -127,7 +128,7 @@
         <h1 class="down white">
           <i class="loader-item fa fa-spinner fa-pulse fa-1x fa-fw"></i>
           <span class="loader-item sr-only">Loading...</span>
-          <i class="loaded-item hidden fa fa-chevron-circle-down fa-1x" aria-hidden="true"></i>
+          <!-- <i class="loaded-item hidden fa fa-chevron-circle-down fa-1x" aria-hidden="true"></i> -->
         </h1>
     </div>
     <div class="container fluid">
@@ -140,7 +141,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row row-padding hidden">
+            <div class="row row-padding">
                 <div class="col-md-8 col-md-offset-2">
                     <h2>Downlad the preview</h2>
                     <p>
@@ -196,16 +197,17 @@
                     here
                 </div>
             </div>
-            <div class="row row-padding">
-                <div class="col-md-8">
-                    <h2>Credits</h2>
-                    <div id="credits"></div>
-                </div>
-            </div>
+            
             <div class="row row-padding">
                 <div class="col-md-8">
                     <h2>Featured on:</h2>
                     <div id="featured-on"></div>
+                </div>
+            </div>
+            <div class="row row-padding">
+                <div class="col-md-8">
+                    <h2>Credits</h2>
+                    <div id="credits"></div>
                 </div>
             </div>
         </div> 
@@ -223,7 +225,7 @@
             listCredits(data['Credits']['elements']);
             listFeaturedOn(data['Featured']['elements']);
             d3.selectAll('.loader-item').classed('hidden', true);
-            d3.selectAll('.loaded-item').classed('hidden', false);
+            // d3.selectAll('.loaded-item').classed('hidden', false);
             d3.select('body').classed('loading', false);
           },
           simpleSheet: false 
