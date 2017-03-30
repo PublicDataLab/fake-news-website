@@ -117,15 +117,22 @@ h4 {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: height 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.loading .main {
+  height: 100vh;
 }
 
 #logo {
-  width: 35vw;
+  max-width: 35vw;
+  max-height: 80%;
 }
 
 /* The animation code */

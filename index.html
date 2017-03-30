@@ -126,7 +126,7 @@
       <h1 class="down white">
         <i class="loader-item fa fa-spinner fa-pulse fa-1x fa-fw"></i>
         <span class="loader-item sr-only">Loading...</span>
-        <i class="loaded-item hidden fa fa-chevron-circle-down fa-1x" aria-hidden="true"></i>
+        <!-- <i class="loaded-item hidden fa fa-chevron-circle-down fa-1x" aria-hidden="true"></i> -->
       </h1>
     </div>
     <div class="container fluid">
@@ -247,7 +247,7 @@
             listCredits(data['Credits']['elements']);
             listFeaturedOn(data['Featured']['elements']);
             d3.selectAll('.loader-item').classed('hidden', true);
-            d3.selectAll('.loaded-item').classed('hidden', false);
+            // d3.selectAll('.loaded-item').classed('hidden', false);
             d3.select('body').classed('loading', false);
           },
           simpleSheet: false
