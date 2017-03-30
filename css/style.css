@@ -160,6 +160,12 @@ span.asterisk {
     border-radius: 0px !important;
 }
 
+img.logo{
+  width: 100%;
+  max-width: 45vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 720px) {
   #mc_embed_signup .indicates-required {
     display: none !important;
