@@ -279,7 +279,7 @@
           role.values.forEach(function(person){
             var line = list.append('li');
             var name = person.url ? '<a href="'+person.url+'" target="_blank"><strong>'+person.name+'</strong></a>' : '<strong>'+person.name+'</strong>';
-            var text = name + ', ' + person.affiliation;
+            var text = person.affiliation ? name + ', ' + person.affiliation : name;
             line.html(text);
           })
         });
