@@ -15,7 +15,7 @@
 
     <meta name="author" content="Public Data Lab">
     <meta name="description" content="A Field Guide to Fake News will explore the use of digital methods to trace the production, circulation and reception of fake news online. It is a project of the Public Data Lab with support from First Draft.">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.png">
 
     <!-- Social Networks meta tags -->
     <meta property="og:title" content="A Field Guide to Fake News">
@@ -298,7 +298,7 @@
             var line = list.append('li');
             //create html element
             var name = institution.url ? '<a href="'+institution.url+'" target="_blank"><strong>'+institution.name+'</strong></a>' : '<strong>'+institution.name+'</strong>';
-            var text = institution.affiliation ? name + ', ' + institution.affiliation : name;
+            var text = institution.country ? name + ', ' + institution.country : name;
             line.html(text);
         })
 
