@@ -15,7 +15,7 @@ body.loading {
 
 a {
   color: inherit;
-  display: inline-block;
+  display: inline;
   text-decoration: underline;
 }
 
