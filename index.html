@@ -183,7 +183,7 @@
             <div class="row row-padding">
               <div class="col-md-10 col-md-offset-1">
                     <!-- <div class="download-button"> -->
-                        <button type="button" class="btn btn-block" data-toggle="modal" data-target="#form-modal">Download the guide!</button>
+                        <button onclick="ga('send', 'event', 'Download', 'Open-window', 'Opened the window')" type="button" class="btn btn-block" data-toggle="modal" data-target="#form-modal" >Download the guide!</button>
                     <!-- </div> -->
 
                     <!-- Modal -->
@@ -234,7 +234,7 @@
                                     <!--End mc_embed_signup-->
                                     <p class="model-text">&nbsp;</p>
                                     <p class="model-text">Download the sample of the first three chapters of the Field Guide To Fake News:</p>
-                                    <button type="button" class="btn btn-block" onClick="location.href='download/sample.pdf'; ga('send', 'event', 'Download', 'Guide-PDF', 'Downloaded the PDF');"  >
+                                    <button type="button" class="btn btn-block" onclick="location.href='download/sample.pdf'; ga('send', 'event', 'Download', 'Guide-PDF', 'Downloaded the PDF')"  >
                                       <!-- <a href="download/sample.pdf" target="_blank">Download</a> -->
                                       Download the Guide
                                     </button>
