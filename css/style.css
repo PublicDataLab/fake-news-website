@@ -140,8 +140,9 @@ span.asterisk {
     font-weight: 400;
     border-bottom: 1px solid #2e2d2e;
     display: inline !important;
-    width: auto !important;
-    min-width: 360px;
+    /*width: auto !important;
+    min-width: 360px;*/
+    width: 100% !important;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
@@ -153,11 +154,20 @@ span.asterisk {
 }
 
 #mc_embed_signup .button {
-    width: 360px !important;
+    /*width: 360px !important;*/
+    width: 100% !important;
     padding: 12px !important;
     height: auto !important;
     font-size: 24px !important;
     border-radius: 0px !important;
+    background-color: #2d2d2d !important;
+    color: white !important;
+    transition: all 0.5s ease;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: #f9ec31 !important;
+  color: #000 !important;
 }
 
 img.logo{
@@ -166,6 +176,41 @@ img.logo{
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+button.btn {
+    /*width: 360px !important;*/
+    padding: 12px;
+    height: auto;
+    font-size: 24px;
+    border-radius: 0px;
+    background-color: #2d2d2d;
+    color: white;
+    border-width: 0px;
+    transition: all 0.5s ease;
+}
+
+button.btn:hover{
+  background-color: #f9ec31;
+  color: #000;
+}
+
+.btn:focus {
+  color: #fff !important;
+}
+
+button.btn:focus, button.btn:active, , button.btn:hover:active {
+  background-color: #E95265;
+  color: #fff;
+}
+
+.modal-header {
+  background-color: #E95265;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
 @media screen and (max-width: 720px) {
   #mc_embed_signup .indicates-required {
     display: none !important;
