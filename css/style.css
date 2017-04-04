@@ -1,79 +1,11 @@
-/*.title {
-  color: #212121;
-  font-size: 50px;
-  text-align: center;
-}*/
-
-/*.intro-text {
-  color: #212121;
-  font-size: 14px;
-  text-align: center;
-}*/
-
-/*.body-text {
-  margin-top: 15px;
-  color: #212121;
-  font-size: 14px;
-  text-align: center;
-}*/
-
-/* Modal */
-.modal-title {
-  color: #212121;
-  text-align: center;
-}
-
-.model-text {
-  color: #212121;
-  text-align: center;
-}
-
-.form-group {
-  color: #212121;
-}
-
-.control-label {
-  color: #0288D1;
-}
-
-.form-control {
-  color: #0288D1;
-}
-
-.form-group {
-  color: #0288D1;
-}
-
-.download-link {
-  text-align: center;
-}
-
-.download-link a {
-  color: #0288D1;
-}
-
-.download-link a:hover {
-  color: #1A237E;
-}
-
-.submit-message {
-  color: #212121;
-  font-size: 16px;
-  text-align: center;
-}
-
-.modal-footer {
-  color: #1A237E;
-}
-
-
 /*STYLE*/
 
 body {
   font-family: 'Crimson Text', serif;
-  font-size: 18px;
+  font-size: 21px;
+  color: #2e2d2e;
+  padding-bottom: 15vh;
   border-bottom: 20px solid #E95265;
-  padding-bottom: 80px;
 }
 
 body.loading {
@@ -81,9 +13,27 @@ body.loading {
   overflow: hidden;
 }
 
-.important {
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #E95265;
+}
+
+p.introduction {
+  font-size: 30px;
+}
+
+ul {
+  padding-left: 23px;
+}
+
+h4 {
   font-weight: bold;
-  font-style: italic;
+  font-size: 18px;
 }
 
 .center-text {
@@ -95,7 +45,7 @@ body.loading {
 }
 
 .row-padding {
-  padding-top: 70px;
+  padding-top: 50px;
 
 }
 
@@ -104,21 +54,21 @@ body.loading {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: height 0.5s;
-    transition-delay: 0.3s;
+    transition: height 0.5s ease-in-out;
+    transition-delay: 0.5s;
 }
 
-body.loading .main {
+.loading .main {
   height: 100vh;
 }
 
 #logo {
-  max-width: 35vw;
+  max-width: 45vw;
   max-height: 80%;
 }
 
@@ -140,4 +90,144 @@ body.loading .main {
 .down {
   position: absolute;
   bottom: 50px;
+}
+
+#mc_embed_signup {
+  font-family: 'Crimson Text', serif;
+}
+
+#mc_embed_signup form {
+  padding: 0 !important;
+
+}
+
+/* The animation code */
+@keyframes asterisk-rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#mc_embed_signup .indicates-required {
+  opacity: 0.8;
+  font-size: 16px !important;
+}
+
+span.asterisk {
+  animation-name: asterisk-rotation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 5px 13px; 
+  display: inline-block;
+}
+
+.mc-field-group span.asterisk {
+  transform-origin: 7px 19px;
+}
+
+#mc_embed_signup .mc-field-group label {
+    opacity: 0.8;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+}
+
+#mc_embed_signup .mc-field-group input {
+    border-radius: 0px !important;
+    border: none;
+    padding: 12px 12px 8px !important;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #2e2d2e;
+    display: inline !important;
+    /*width: auto !important;
+    min-width: 360px;*/
+    width: 100% !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
+    border-color: #E95265 !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    color: #E95265 !important;
+}
+
+#mc_embed_signup .button {
+    /*width: 360px !important;*/
+    width: 100% !important;
+    padding: 12px !important;
+    height: auto !important;
+    font-size: 24px !important;
+    border-radius: 0px !important;
+    background-color: #2d2d2d !important;
+    color: white !important;
+    transition: all 0.5s ease;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: #f9ec31 !important;
+  color: #000 !important;
+}
+
+img.logo{
+  width: 100%;
+  max-width: 45vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+button.btn {
+    /*width: 360px !important;*/
+    padding: 12px;
+    height: auto;
+    font-size: 24px;
+    border-radius: 0px;
+    background-color: #2d2d2d;
+    color: white;
+    border-width: 0px;
+    transition: all 0.5s ease;
+}
+
+button.btn:hover{
+  background-color: #f9ec31;
+  color: #000;
+}
+
+.btn:focus {
+  color: #fff !important;
+}
+
+button.btn:focus, button.btn:active, , button.btn:hover:active {
+  background-color: #E95265;
+  color: #fff;
+}
+
+.modal-header {
+  background-color: #E95265;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 720px) {
+  #mc_embed_signup .indicates-required {
+    display: none !important;
+  }
+  #mc_embed_signup .button{
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+  #mc_embed_signup .mc-field-group input {
+    min-width: 100% !important;
+    padding: 16px 12px 10px !important;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  p.introduction {
+    font-size: 24px;
+  }
 }
