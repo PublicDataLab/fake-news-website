@@ -12,32 +12,19 @@ var database = firebase.database();
 
 function subscribe() {
     if ($('#contact_form').validator('validate').has('.has-error').length === 0) {
-        // Check if already subscribed
-        firebase.database().ref('/email/').once('value')
-            .then(function(snapshot) {
-                var found = false;
-
-                snapshot.forEach(function(element) {
-                    if (element.val().value == document.getElementById('inputEmail').value) {
-                        found = true;
-                    }
-                })
-
-                if (!found) {
-                    firebase.database().ref('email/').push()
-                        .set({
-                            timestamp: firebase.database.ServerValue.TIMESTAMP,
-                            value: document.getElementById('inputEmail').value
-                        })
-                        .then(function() {
-                            document.getElementById('message').innerHTML = "Thanks!";
-                        })
-                        .catch(function(e) {
-                            console.log(e);
-                        });
-                } else {
-                    document.getElementById('message').innerHTML = "You've already subscribed!";
-                }
+        // Checking for duplicates on server side.
+        var email = document.getElementById('inputEmail').value;
+        email = email.replace(/\./g, ',');
+        firebase.database().ref('email/' + email)
+            .set({
+                email: email,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
+            })
+            .then(function() {
+                document.getElementById('message').innerHTML = "Thanks!";
+            })
+            .catch(function(e) {
+                document.getElementById('message').innerHTML = "You're already subscribed!";
             });
     }
 }
