@@ -5,6 +5,7 @@
     <title>A Field Guide to Fake News</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#E95265">
     <!-- Windows Phone -->
@@ -12,10 +13,41 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#E95265">
 
+    <meta name="author" content="Public Data Lab">
+    <meta name="description" content="A Field Guide to Fake News will explore the use of digital methods to trace the production, circulation and reception of fake news online. It is a project of the Public Data Lab with support from First Draft.">
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Social Networks meta tags -->
+    <meta property="og:title" content="A Field Guide to Fake News">
+    <meta property="og:description" content="A Field Guide to Fake News will explore the use of digital methods to trace the production, circulation and reception of fake news online. It is a project of the Public Data Lab with support from First Draft.">
+    <meta property="og:image" content="http://fakenews.publicdatalab.org/images/cover.png">
+    <meta property="og:image:width" content="3360">
+    <meta property="og:image:height" content="1472">
+    <meta property="og:url" content="http://fakenews.publicdatalab.org/">
+    <meta name="twitter:card" content="summary_large_image">
+
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f9ec31"
+        }
+      },
+      "content": {
+        "message": "This website uses real cookies."
+      }
+    })});
+    </script>
 </head>
 
 <body class="loading">
@@ -255,7 +287,7 @@
           role.values.forEach(function(person){
             var line = list.append('li');
             var name = person.url ? '<a href="'+person.url+'"><strong>'+person.name+'</strong></a>' : '<strong>'+person.name+'</strong>';
-            var text = name + ', ' + person.affiliation;
+            var text = person.affiliation ? name + ', ' + person.affiliation : name;
             line.html(text);
           })
         });
