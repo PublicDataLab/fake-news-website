@@ -172,13 +172,13 @@
             <div class="row row-padding">
               <div class="col-md-10 col-md-offset-1">
                   <p class="introduction">
-                    <strong><i>A Field Guide to Fake News</i></strong> will explore the use of digital methods to trace the production, circulation and reception of fake news online.
+                    <strong><i>A Field Guide to Fake News</i></strong> explores the use of digital methods to trace the production, circulation and reception of fake news online.
                   </p>
                   <p class="introduction">
                     It is a project of the <a href="http://publicdatalab.org/">Public Data Lab</a> with support from <a href="https://firstdraftnews.com/">First Draft.</a>
                   </p>
                   <p class="introduction">
-                    An open access sample of the guide will be published in early April. If you’d like to be notified of when this becomes available, please leave us your contact details below and we’ll be in touch.
+                    An open access sample of the first three chapters of the guide is available via the link below.
                   </p>
               </div>
               <!-- <div class="col-md-10 col-md-offset-1">
@@ -200,7 +200,7 @@
             <div class="row row-padding">
               <div class="col-md-10 col-md-offset-1">
                     <!-- <div class="download-button"> -->
-                        <button onclick="ga('send', 'event', 'Download', 'Open-window', 'Opened the window')" type="button" class="btn btn-block" data-toggle="modal" data-target="#form-modal" >Download the guide!</button>
+                        <button onclick="ga('send', 'event', 'Download', 'Open-window', 'Opened the window')" type="button" class="btn btn-block" data-toggle="modal" data-target="#form-modal" >Download a Sample!</button>
                     <!-- </div> -->
 
                     <!-- Modal -->
@@ -212,7 +212,7 @@
                                     <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p class="model-text">If you want to be notified when the final version of the guide is available, please register your e-mail in this form. This is not required for the Guide download.</p>
+                                    <p class="model-text">If you want to be notified when the final version of the guide is available, please add your contact details to the form below. This is not required to download the guide. We will not sell or share your information.</p>
 
                                     <!-- Begin MailChimp Signup Form -->
                                     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -243,17 +243,17 @@
                                         <div class="response" id="mce-success-response" style="display:none"></div>
                                       </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d40e560175082c95b321ed8e3_d138f43172" tabindex="-1" value=""></div>
-                                        <div class="clear"><input type="submit" value="Subscribe to updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                        <div class="clear"><input type="submit" value="Notify Me When the Full Version Is Available!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                                         </div>
                                     </form>
                                     </div>
                                     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                                     <!--End mc_embed_signup-->
                                     <p class="model-text">&nbsp;</p>
-                                    <p class="model-text">Download the sample of the first three chapters of the Field Guide To Fake News:</p>
+                                    <p class="model-text">Download a sample of the first three chapters of <em>A Field Guide To Fake News</em> via the following link:</p>
                                     <button type="button" class="btn btn-block" onclick="location.href='download/sample.pdf'; ga('send', 'event', 'Download', 'Guide-PDF', 'Downloaded the PDF')"  >
                                       <!-- <a href="download/sample.pdf" target="_blank">Download</a> -->
-                                      Download the Guide
+                                      Take Me to the Sample!
                                     </button>
                                 </div>
                                 <!-- <div class="modal-footer">
@@ -264,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
             <div class="row row-padding">
                 <div class="col-md-10 col-md-offset-1">
@@ -272,7 +272,7 @@
                 </div>
                 <div class="col-md-2 col-md-offset-1">
                   <a href="http://publicdatalab.org/"><img class="logo" src="images/logos/logo-publicdatalab.svg"></a>
-                  
+
                 </div>
                 <div class="col-md-2 col-md-offset-1">
                   <a href="https://firstdraftnews.com/"><img class="logo" src="images/logos/logo-firstdraft.svg"></a>
@@ -322,7 +322,7 @@
         var nested_data = d3.nest()
             .key(function(d) { return d['display on the website']; })
             .entries(data);
-        
+
         // finter elements
         var institutions = nested_data.filter(function(d){
           return d.key == 'TRUE'
