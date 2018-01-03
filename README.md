@@ -1,2 +1,2 @@
 # fake-news-website
-Website for "A field guide for fake news"
+Website for A Field Guide to "Fake News" and Other Information Disorders
