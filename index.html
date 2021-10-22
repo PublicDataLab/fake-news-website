@@ -318,18 +318,25 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.js"></script>
 	<script>
 	function init() {
-		Tabletop.init({
-			key: 'https://docs.google.com/spreadsheets/d/1ffGN4kcR1NRxtr7h-XSq9UFydh335sa0LWnRQ4VEhro/pubhtml',
-			callback: function(data, tabletop) {
-				listCredits(data['Credits']['elements']);
-				listFeaturedOn(data['Featured']['elements']);
-				listInstitutions(data['Institutions']['elements']);
-				d3.selectAll('.loader-item').classed('hidden', true);
-				// d3.selectAll('.loaded-item').classed('hidden', false);
-				d3.select('body').classed('loading', false);
-			},
-			simpleSheet: false
-		})
+
+		const creditsCsv = fetch("./data/credits.csv").then(response => response.text());
+		const featuredCsv = fetch("./data/featured.csv").then(response => response.text());
+		const institutionsCsv = fetch("./data/institutions.csv").then(response => response.text());
+
+		Promise.all([creditsCsv, featuredCsv, institutionsCsv]).then((values) => {
+			
+			values = values.map(d=>d3.csvParse(d))
+			console.log(values);
+
+			listCredits(values[0]);
+			listFeaturedOn(values[1]);
+			listInstitutions(values[2]);
+
+			d3.selectAll('.loader-item').classed('hidden', true);
+			// d3.selectAll('.loaded-item').classed('hidden', false);
+			d3.select('body').classed('loading', false);
+		});
+		
 	}
 
 	function listInstitutions(data) {
